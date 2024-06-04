@@ -1,0 +1,20 @@
+conda activate zhuyue
+
+mkdir /data/b/qiuxingru/zhuyue/mapping
+
+bwa index ../ref_ce11/WBcel235_genomic.fna
+
+# bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq > N2a.sam
+
+# samtools view -b N2a.sam > N2a.bam
+
+# samtools sort -o N2a.sorted.bam N2a.bam
+
+#(前三行汇成一行)
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2b/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+
+#生成bai文件     
+samtools index N2a.sorted.bam 
