@@ -28,3 +28,13 @@ nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/
 
 #生成bai文件     
 samtools index N2a.sorted.bam 
+samtools index N2b.sorted.bam
+samtools index N2c.sorted.bam
+
+samtools index MQD1700a.sorted.bam
+samtools index MQD1700b.sorted.bam
+samtools index MQD1700c.sorted.bam
+
+samtools index MQD1703a.sorted.bam
+samtools index MQD1703b.sorted.bam
+samtools index MQD1703c.sorted.bam
