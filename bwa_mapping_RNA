@@ -11,10 +11,20 @@ bwa index ../ref_ce11/WBcel235_genomic.fna
 # samtools sort -o N2a.sorted.bam N2a.bam
 
 #(前三行汇成一行)
-nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
-nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2b/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
-nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
-nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq｜samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2a/N2a_2.clean.fq|samtools sort -o N2a.sorted.bam >N2a_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2b/N2b_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2b/N2b_2.clean.fq|samtools sort -o N2b.sorted.bam >N2b_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/N2c/N2c_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/N2c/N2c_2.clean.fq|samtools sort -o N2c.sorted.bam >N2c_output.log 2>&1 &
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1700a/MQD1700a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1700a/MQD1700a_2.clean.fq|samtools sort -o MQD1700a.sorted.bam >MQD1700a_output.log 2>&1 &
+
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1700b/MQD1700b_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1700b/MQD1700b_2.clean.fq|samtools sort -o MQD1700b.sorted.bam >MQD1700b_output.log 2>&1 &
+
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1700c/MQD1700c_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1700c/MQD1700c_2.clean.fq|samtools sort -o MQD1700c.sorted.bam >MQD1700c_output.log 2>&1 &
+
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1703a/MQD1703a_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1703a/MQD1703a_2.clean.fq|samtools sort -o MQD1703a.sorted.bam >MQD1703a_output.log 2>&1 &
+
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1703b/MQD1703b_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1703b/MQD1703b_2.clean.fq|samtools sort -o MQD1703b.sorted.bam >MQD1703b_output.log 2>&1 &
+
+nohup bwa mem -t 8 /data/b/qiuxingru/zhuyue/ref_ce11/WBcel235_genomic.fna /data/b/qiuxingru/zhuyue/GZH_data/MQD1703c/MQD1703c_1.clean.fq /data/b/qiuxingru/zhuyue/GZH_data/MQD1703c/MQD1703c_2.clean.fq|samtools sort -o MQD1703c.sorted.bam >MQD1703c_output.log 2>&1 &
 
 #生成bai文件     
 samtools index N2a.sorted.bam 
